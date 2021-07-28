@@ -13,10 +13,7 @@ GROUP BY d.name
 -- 2
 SELECT dep_id
 FROM employee
-WHERE dep_id IN (SELECT dep_id
-                 FROM employee
-                 GROUP BY dep_id
-                 HAVING COUNT(*) > 3)
 GROUP BY dep_id
+HAVING COUNT(*) > 3
 
 
